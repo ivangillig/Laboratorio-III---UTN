@@ -1,7 +1,5 @@
 $(document).ready(function () {
 
-   
-    var cantidadTotal = 0;
     var montoTotal = 0;
     var carrito = [];
     comprobarCarrito()
@@ -27,7 +25,13 @@ $(document).ready(function () {
     $("#subtotal").click(function (e) { 
 
         if (carrito.length == 3) {
-           alert('El máximo de productos a vender es 3');
+           
+           Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'El máximo de productos a vender es 3!'
+          })
+
            return;
         }
 
@@ -188,7 +192,7 @@ $(document).ready(function () {
                 return 9000;
                 break;
 
-            case 'Notebook Positivo BGH Core I7':
+            case 'Notebook Positivo BGH CoreI7':
                 return 45000;
                 break;
 
