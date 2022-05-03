@@ -94,6 +94,8 @@ $(document).ready(function () {
 
     function comprobarCarrito(){
 
+        //funcion que esconde tablas/formularios si no hay nada en el carro
+
         if (cantidadTotal > 0) {
             $("#tablaCarrito").removeClass('invisible');
             $("#sumarTotal").removeClass('invisible');
