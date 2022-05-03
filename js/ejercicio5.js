@@ -3,12 +3,16 @@ $(document).ready(function () {
     $("#listado").change(function (e) { 
         e.preventDefault();
 
-        
+        //Si existe la columna con fecha de devolución la elimino
+        $(".agregado").remove();
+
+        //cuando selecciono un libro hago visible la tabla 
         $("#tabla").removeClass('invisible');
         $("#tabla").addClass('visible');
         
         libro = $("#listado").val();
         
+        //si vuelvo a seleccionar la opcion sin libro escondo la tabla de nuevo
         if ($("#listado").val() == 0){
             $("#tabla").removeClass('visible');
             $("#tabla").addClass('invisible');
@@ -45,9 +49,14 @@ $(document).ready(function () {
         
         if (estado == 'Para préstamo') {
             var fechaDevolucion = new Date();
+
+            //si el libro está ok para prestamo le sumo 5 días a partir de la fecha de consulta
             fechaDevolucion.setDate(fechaDevolucion.getDate()+5)
 
-            $("#devolucion").text('Devolver antes del ' + fechaDevolucion.toLocaleDateString("es-AR"));
+            //agrego la columna con fecha de devolución, le pongo la clase agregado para poder eliminarla cuando cambie
+            $("#columna").append(`<th class="agregado">Devolución</th>`);
+            $("#fila").append(`<td class="agregado">` +  fechaDevolucion.toLocaleDateString("es-AR") + "</td");
+
 
         }
 

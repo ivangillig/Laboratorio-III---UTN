@@ -6,6 +6,8 @@ $(document).ready(function(){
 
         var nro1 = $("#num1").val();
         var nro2 = $("#num2").val();
+
+        
         
         var resultado = parseFloat(nro1)+parseFloat(nro2);
         const signo = escero(resultado);
