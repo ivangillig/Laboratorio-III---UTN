@@ -83,7 +83,7 @@ $(document).ready(function () {
             $(`#${id}-nuevaFila`).append(`<td id="${id}-cantidadTotal"</td>`);
             $(`#${id}-nuevaFila`).append(`<td id="${id}-unitarioTotal"</td>`);
             $(`#${id}-nuevaFila`).append(`<td id="${id}-sumaTotal"</td>`);
-            $(`#${id}-nuevaFila`).append(`<td id="${id}"> <a id="eliminarItem" class="btn btn-primary w-50 text-bold" href="#" role="button">Eliminar</a> </td>`);
+            $(`#${id}-nuevaFila`).append(`<td id="${id}"> <a id="eliminarItem" class="btn btn-primary w-100 text-bold" href="#" role="button">Eliminar</a> </td>`);
     
             $(`#${id}-productoTotal`).text(`${prd}`);
             $(`#${id}-cantidadTotal`).text(`${cant}`);

@@ -130,7 +130,7 @@ $(document).ready(function () {
                 return 9000;
                 break;
 
-            case 'Notebook Positivo BGH Core I7':
+            case 'Notebook Positivo BGH CoreI7':
                 return 45000;
                 break;
 
