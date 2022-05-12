@@ -145,6 +145,7 @@ $(document).ready(function () {
             case 'Tablet Huawei 16 GB':
                 return 4400;
                 break;
+                
         }
     }
 
